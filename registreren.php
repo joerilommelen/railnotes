@@ -22,12 +22,21 @@
 		<link href="images/apple-launch-568h.png" sizes="640x1136" media="(device-height: 568px)" rel="apple-touch-startup-image">
 	</head>
 	<body>
-	<div class="main">
-	
-		<div class="interact">
-		<a href="registreren.php"><img src="images/registreren.png" alt="registreren"></a>
-		<a href="aanmelden.php"><img src="images/aanmelden.png" alt="aanmelden"></a>
+	<div class="container">
+		<div class="header">
+		
+		
 		</div>
+	
+	
+		
+		<!--
+<div class="footer">
+		<a href="index.php"><img src="images/overzicht_active.png" alt="overzicht_active"></a>
+		<a href="zoeken.php"><img src="images/zoeken.png" alt="zoeken"></a>
+		<a href="instellingen.php"><img src="images/instellingen.png" alt="instellingen"></a>
+		</div>
+-->
 	</div>
 	</body>
 </html>
