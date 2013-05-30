@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<title>Railnotes</title>
@@ -13,7 +16,9 @@
 		<meta name="viewport" content="user-scalable=0, initial-scale=0.5">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="javascript/functions.js" type="text/javascript"></script>
+		<script src="javascript/plugins.js"></script>
 		<!-- iPhone LAUNCHSCREEN-->
 		<link href="images/apple-launch-480h.png" sizes="320x480" media="(device-height: 480px)" rel="apple-touch-startup-image">
 		<!-- iPhone (Retina) LAUNCHSCREEN-->
@@ -25,8 +30,20 @@
 	<div class="main">
 	
 		<div class="interact">
-		<a href="registreren.php"><img src="images/registreren.png" alt="registreren"></a>
-		<a href="aanmelden.php"><img src="images/aanmelden.png" alt="aanmelden"></a>
+			
+				<div id="registreren">
+					
+					<span class="iconspan"></span><p>Registreer</p><span class="arrowspan"></span>
+					
+				</div>
+	
+				
+				<div id="aanmelden">
+					
+					<span class="iconspan"></span><p>Aanmelden</p><span class="arrowspan"></span>
+					
+				</div>
+
 		</div>
 	</div>
 	</body>

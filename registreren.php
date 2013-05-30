@@ -13,7 +13,9 @@
 		<meta name="viewport" content="user-scalable=0, initial-scale=0.5">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="javascript/functions.js" type="text/javascript"></script>
+		<script src="javascript/plugins.js"></script>
 		<!-- iPhone LAUNCHSCREEN-->
 		<link href="images/apple-launch-480h.png" sizes="320x480" media="(device-height: 480px)" rel="apple-touch-startup-image">
 		<!-- iPhone (Retina) LAUNCHSCREEN-->
@@ -25,9 +27,27 @@
 	<div class="container">
 		<div class="header">
 		
+			<div class="arrow-left" id="gaterug"></div>
 		
 		</div>
+		
+		<div class="content-registreer">
+		
+			<form id="form-registreer" method="POST" action="">
+			
+				<input type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="Gebruikersnaam"/>
+					
+				<input type="text" id="email" name="email" placeholder="Email"/>
+				
+				<input type="text" id="volledigenaam" name="volledigenaam" placeholder="Volledige naam"/>
+				
+				<input type="password" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord"/>
+				
+				<input type="submit" id="toevoegen" name="toevoegen" value="Account aanmaken"/>
+				
+			</form>
 	
+		</div>
 	
 		
 		<!--
