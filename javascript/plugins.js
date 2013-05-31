@@ -38,13 +38,7 @@
 				  	   location.href = 'aanmelden.php'+$(this).serialize();
 				
 				});
-				
-				$("#gaterug").click(function() {
-				
-				  	   location.href = 'index.php'+$(this).serialize();
-				
-				});
-			
+							
 			
 			
 			

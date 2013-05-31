@@ -1,4 +1,26 @@
-<!DOCTYPE html>
+<?php 
+
+include_once('includes/classes/gebruiker.class.php');
+
+if(isset($_POST['aanmelden'])){
+
+$gebruiker = new Gebruiker;
+
+		$gebruiker -> Gebruikersnaam = $_POST['gebruikersnaam'];
+		$gebruiker -> Email = $_POST['email'];
+		$gebruiker -> Volledigenaam = $_POST['volledigenaam'];
+		$gebruiker -> Wachtwoord = $_POST['wachtwoord'];
+
+		$gebruiker -> Savegebruiker();
+}
+
+catch (Exception $e) {
+	$feedback = $e -> getMessage();
+}
+
+}
+
+?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -27,7 +49,7 @@
 	<div class="container">
 		<div class="header">
 		
-			<div class="arrow-left" id="gaterug"></div>
+			<a href="index.php"><div class="arrow-left"></div></a>
 		
 		</div>
 		
@@ -35,13 +57,13 @@
 		
 			<form id="form-registreer" method="POST" action="">
 			
-				<input type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="Gebruikersnaam"/>
+				<input type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="Gebruikersnaam" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Gebruikersnaam'"/>
 					
-				<input type="text" id="email" name="email" placeholder="Email"/>
+				<input type="text" id="email" name="email" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'"/>
 				
-				<input type="text" id="volledigenaam" name="volledigenaam" placeholder="Volledige naam"/>
+				<input type="text" id="volledigenaam" name="volledigenaam" placeholder="Volledige naam" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Volledige naam'"/>
 				
-				<input type="password" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord"/>
+				<input type="password" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wachtwoord'"/>
 				
 				<input type="submit" id="toevoegen" name="toevoegen" value="Account aanmaken"/>
 				
