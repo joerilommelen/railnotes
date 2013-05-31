@@ -38,7 +38,57 @@
 				  	   location.href = 'aanmelden.php'+$(this).serialize();
 				
 				});
-							
+				
+				
+				$("#form-registreer").submit(function(){
+					
+				var myData = $('#form-registreer').serialize();
+			
+				$.ajax({
+				    type: "POST",
+			
+				    //URL of the php file that will process the login
+				    url: "registreer.php",
+				    
+				    dataType: 'json',
+			
+				    //Pass the data through
+				    data: myData,
+			
+				    //Handle the response
+				    success: function (data) {
+			
+			        switch(data.case){
+			       
+					case 1: 
+					$(".feedback").html(data.message).fadeIn('slow');
+					
+			        break;
+			       
+					case 2:      
+			        $(".feedback").html(data.message).fadeIn('slow');
+			        break;
+			        
+			        case 3: 
+			        $(".feedback").html(data.message).fadeIn('slow');
+			        break;
+			        
+			        case 4: 
+			        $(".feedback").html(data.message).fadeIn('slow');
+			        break;
+			        
+			        default:
+			        /* If none of the above */
+			
+			        }
+			}			 
+				})	
+			
+				//Stop the submit button from submitting the form 
+				return false;   
+			    });    
+			
+										
 			
 			
 			

@@ -34,7 +34,7 @@
 				
 			<div class="content-aanmelden">
 		
-			<form id="form-aanmelden" method="POST" action="">
+			<form id="form-aanmelden" method="POST" action="" enctype="multipart/form-data">
 			
 				<input type="text" id="gebruikersnaam-login" name="gebruikersnaam-login" placeholder="Gebruikersnaam" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Gebruikersnaam'"/>
 				

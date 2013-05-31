@@ -135,6 +135,11 @@ html, body{
 			 border-radius: 0;
 		}
 		
+		.content-registreer #form-registreer .feedback {
+			font-size: 25px;
+			margin-bottom: 15px;
+		}
+		
 		.content-registreer #form-registreer #gebruikersnaam {
 			-webkit-border-top-left-radius: 20px;
 			-webkit-border-top-right-radius: 20px;

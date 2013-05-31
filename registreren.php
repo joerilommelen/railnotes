@@ -1,24 +1,5 @@
 <?php 
 
-include_once('includes/classes/gebruiker.class.php');
-
-if(isset($_POST['aanmelden'])){
-
-$gebruiker = new Gebruiker;
-
-		$gebruiker -> Gebruikersnaam = $_POST['gebruikersnaam'];
-		$gebruiker -> Email = $_POST['email'];
-		$gebruiker -> Volledigenaam = $_POST['volledigenaam'];
-		$gebruiker -> Wachtwoord = $_POST['wachtwoord'];
-
-		$gebruiker -> Savegebruiker();
-}
-
-catch (Exception $e) {
-	$feedback = $e -> getMessage();
-}
-
-}
 
 ?><!DOCTYPE html>
 <html>
@@ -55,7 +36,9 @@ catch (Exception $e) {
 		
 		<div class="content-registreer">
 		
-			<form id="form-registreer" method="POST" action="">
+			<form id="form-registreer" method="POST" action="registreer.php">
+			
+				<div class="feedback">Vul onderstaande gegevens in</div>
 			
 				<input type="text" id="gebruikersnaam" name="gebruikersnaam" placeholder="Gebruikersnaam" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Gebruikersnaam'"/>
 					

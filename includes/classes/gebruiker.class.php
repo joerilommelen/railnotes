@@ -58,24 +58,23 @@ class Gebruiker {
 	public function Savegebruiker() {
 	
 		include('includes/connection.php');
+						
 			
-						$sql = "INSERT INTO tbl_Users
-								(Gebruikersnaam, 
-								Email, 
-								Volledigenaam,
-								Wachtwoord
-								)								) 
-								VALUES 
-								(
+						$sql = "INSERT INTO tbl_Users (Gebruikersnaam, Email, Volledigenaam, Wachtwoord)
+								VALUES (
+								
 								'" . $conn -> real_escape_string($this -> m_sGebruikersnaam) . "', 
 								'" . $conn -> real_escape_string($this -> m_sEmail) . "',
 								'" . $conn -> real_escape_string($this -> m_sVolledigenaam) . "',
 								'" . $conn -> real_escape_string($this -> m_sWachtwoord) . "'
-								)";
+								
+								);";
 				
 						if (!$conn -> query($sql)) {
 							throw new Exception("Fout bij registartie");
 						}	
+	}
+	
 	}
 	
 	
