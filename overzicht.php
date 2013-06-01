@@ -1,10 +1,17 @@
-<!DOCTYPE html>
+<?php
+
+include_once("includes/classes/overzicht.class.php");
+$oFeed = new Overzicht;
+$AllFeeds = $oFeed -> getOverzicht();
+
+?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>Railnotes</title>
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" charset="utf-8">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" charset="utf-8">
 		<link href="images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" />
 		<link href="images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72" />
 		<link href="images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114" />
@@ -27,9 +34,21 @@
 		
 		
 		</div>
-	
-	
+		<div class="content">
+		<?php 
+		    			while ($Feed = mysqli_fetch_assoc($AllFeeds)) {
+			    				echo '<div class="item">';
+			    				echo '<a href="detail.php?id=' . $Feed['id'] . '">';
+			    				echo '<p>' . $Feed['VertrekUur'] . '</p>';
+			    				echo '<p>' . $Feed['Vertraging'] . '</p>';
+			    				echo '<p>' . $Feed['TrajectVan'] . ' - ' . $Feed['TrajectNaar'] .'</p>';
+			    				echo '<p>' . $Feed['Station'] . '</p>';
+			    				echo '</a>';
+			    				echo '</div>';
+		    			}
+	    			?>
 		
+		</div>		
 		<div class="footer">
 		<a href="index.php"><img src="images/overzicht_active.png" alt="overzicht_active"></a>
 		<a href="zoeken.php"><img src="images/zoeken.png" alt="zoeken"></a>

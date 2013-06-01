@@ -25,8 +25,31 @@
 	<div class="container">
 		<div class="header">
 		
+					<a href="index.php"><div class="arrow-left"></div></a>
+					
+		</div>
+		
+		<div class="content">
+		
+				
+			<div class="content-aanmelden">
+		
+			<form id="form-aanmelden" method="POST" action="" enctype="multipart/form-data">
+			
+				<input type="text" id="gebruikersnaam-login" name="gebruikersnaam-login" placeholder="Gebruikersnaam" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Gebruikersnaam'"/>
+				
+				<input type="password" id="wachtwoord-login" name="wachtwoord-login" placeholder="Wachtwoord" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Wachtwoord'" />
+				
+				<a href="">Wachtwoord vergeten?</a>
+				
+				<input type="submit" id="aanmelden" name="aanmelden" value="Aanmelden"/>
+				
+			</form>
 		
 		</div>
+		
+		</div>
+
 	
 	
 		
