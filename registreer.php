@@ -9,7 +9,7 @@ include('includes/connection.php');
 	$Volledigenaam = isset($_POST['volledigenaam']);
 	$Paswoord = isset($_POST['wachtwoord']);
 		
-	if(empty( $_POST['gebruikersnaam']) && empty($_POST['email']) && empty($_POST['volledigenaam']) && empty($_POST['wachtwoord'])){
+	if(empty( $_POST['gebruikersnaam']) || empty($_POST['email']) || empty($_POST['volledigenaam']) || empty($_POST['wachtwoord'])){
 			
 		$data = array(
 			'message'=> "Gelieve alle velden in te vullen",
