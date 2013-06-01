@@ -63,6 +63,9 @@ class Overzicht {
 			case "Station" :
 				$vResult = $this -> m_sStation;
 				break;
+			case "Commentaar" :
+				$vResult = $this -> m_sCommentaar;
+				break;
 			case "Zoek" :
 				$vResult = $this -> m_sZoek;
 				break;
@@ -87,6 +90,25 @@ class Overzicht {
 		$sSql = "SELECT * FROM tbl_Overzicht WHERE Station LIKE '%"."$sZoek"."%' ORDER BY id DESC";
 		$res = $conn -> query($sSql);
 		return ($res);
+	}
+	
+	public function getOverzicht_voegtoe()
+	{
+		
+		include ('connection.php');
+		//INSERT INTO table_name (column1, column2, column3,...) VALUES (value1, value2, value3,...)
+
+			
+			$sSql = 'INSERT INTO tbl_Overzicht (VertrekUur, Vertraging, TrajectVan, TrajectNaar, Station, Commentaar) VALUES ( 
+		"' . $conn -> real_escape_string($this -> m_sVertrekUur) . '",
+		"' . $conn -> real_escape_string($this -> m_sVertraging) . '",
+		"' . $conn -> real_escape_string($this -> m_sTrajectVan) . '",
+		"' . $conn -> real_escape_string($this -> m_sTrajectNaar) . '", 
+		"' . $conn -> real_escape_string($this -> m_sStation) . '", 
+		"' . $conn -> real_escape_string($this -> m_sCommentaar) . '");';	
+		$res = $conn -> query($sSql);
+		return ($res);
+						
 	}
 	
 
