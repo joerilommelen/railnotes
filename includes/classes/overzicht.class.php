@@ -92,6 +92,14 @@ class Overzicht {
 		return ($res);
 	}
 	
+	public function printDetail()
+	{
+		include ('connection.php');
+		$sSql = "SELECT * FROM tbl_Overzicht WHERE id = '".$this->m_sId."'";
+		$res = $conn -> query($sSql);
+		return ($res);
+	}
+	
 	public function getOverzicht_voegtoe()
 	{
 		

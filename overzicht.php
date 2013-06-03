@@ -32,25 +32,37 @@ $AllFeeds = $oFeed -> getOverzicht();
 	<div class="container">
 		<div class="header">
 		
+		<a href="note.php"><div class="note"></div></a>
 		
 		</div>
 		<div class="content">
 		<?php 
 		    			while ($Feed = mysqli_fetch_assoc($AllFeeds)) {
+		    			echo '<a href="detail.php?id=' . $Feed['id'] . '">';
 			    				echo '<div class="item">';
-			    				echo '<a href="detail.php?id=' . $Feed['id'] . '">';
-			    				echo '<p>' . $Feed['VertrekUur'] . '</p>';
-			    				echo '<p>' . $Feed['Vertraging'] . '</p>';
-			    				echo '<p>' . $Feed['TrajectVan'] . ' - ' . $Feed['TrajectNaar'] .'</p>';
-			    				echo '<p>' . $Feed['Station'] . '</p>';
-			    				echo '</a>';
+			    				
+			    				echo '<div class="tijd">';
+			    				echo '<p id="uur"> ' . $Feed['VertrekUur'] . '</p>';
+			    				echo '<p id="vertraging"> + ' . $Feed['Vertraging'] . '</p>';
 			    				echo '</div>';
+			    				echo '<div class="vannaar">';
+			    				echo '<p id="traject">' . $Feed['TrajectVan'] . ' - ' . $Feed['TrajectNaar'] .'</p>';
+			    				echo '<div class="flag">';
+			    				echo '<p id="tag">Station ' . $Feed['Station'] . '</p>';
+			    				echo '</div>';
+			    				echo '</div>';
+			    				
+			    				echo '<div style="clear:both;"></div>';
+			    				echo '</div>';
+			    				echo '</a>';
+			    				
 		    			}
 	    			?>
+	    			<div style="clear:both;"></div>
 		
 		</div>		
 		<div class="footer">
-		<a href="index.php"><img src="images/overzicht_active.png" alt="overzicht_active"></a>
+		<a href="overzicht.php"><img src="images/overzicht_active.png" alt="overzicht_active"></a>
 		<a href="zoeken.php"><img src="images/zoeken.png" alt="zoeken"></a>
 		<a href="instellingen.php"><img src="images/instellingen.png" alt="instellingen"></a>
 		</div>

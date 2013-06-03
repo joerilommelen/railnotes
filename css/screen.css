@@ -1,3 +1,246 @@
-.content{
-	padding-top: 88px;
+.content, .detail{
+	padding-top: 110px;
+	background-color: white;
+	padding-left: 10px;
+	min-height: 100%;
+}
+
+
+a{
+	text-decoration: none;
+}
+
+.content .item{
+	clear: both;
+	margin-bottom: 30px;
+	background-image: url(../images/arrow.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.detail .item{
+	clear: both;
+	margin-bottom: 30px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.item .tijd{
+	float: left;
+	margin-right: 30px;
+}
+.item .vannaar{
+	float: left;
+}
+
+a .item p#uur{
+	font-family: Helvetica;
+	font-size: 35px;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a .item p#vertraging{
+	font-family: Helvetica;
+	font-size: 17px;
+	color: #ed1c24;
+	text-decoration: none;
+	font-weight: normal;
+	margin-left: 20px;
+	letter-spacing: 1px;
+}
+
+a .item .vannaar p#traject {
+	font-family: Helvetica;
+	font-size: 30px;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+
+.item p#uur{
+	font-family: Helvetica;
+	font-size: 35px;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.item p#vertraging{
+	font-family: Helvetica;
+	font-size: 17px;
+	color: #ed1c24;
+	text-decoration: none;
+	font-weight: normal;
+	margin-left: 20px;
+	letter-spacing: 1px;
+}
+
+.item .vannaar p#traject {
+	font-family: Helvetica;
+	font-size: 30px;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.item .flag{
+	background-image: url(../images/tag.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 30px;
+	padding-top: 0px;
+}
+
+a .item .flag p#tag{
+	font-family: Helvetica;
+	font-size: 18px;
+	color: black;
+	text-decoration: none;
+	font-weight: normal;
+	letter-spacing: 1px;
+	margin-left: 30px;
+	
+}
+
+.item .flag p#tag{
+	font-family: Helvetica;
+	font-size: 18px;
+	color: black;
+	text-decoration: none;
+	font-weight: normal;
+	letter-spacing: 1px;
+	margin-left: 30px;
+	
+}
+
+.note {
+	background-image: url(../images/note.png);
+	background-repeat: no-repeat;
+	margin: 12px 8px 8px 520px;
+	
+	height: 88px;
+	width: auto;
+}
+
+
+
+.annuleer {
+	background-image: url(../images/annuleer.png);
+	background-repeat: no-repeat;
+	margin: 12px 8px 8px 8px;
+	width: 140px;
+	height: 88px;
+	float: left;
+}
+
+.voegtoe {
+	background-image: url(../images/VoegToe.png);
+	background-repeat: no-repeat;
+	margin: 12px 8px 8px 350px;
+	float: left;
+	height: 88px;
+	width: 140px;
+}
+
+.arrow-left-detail{
+		background-image: url(../images/arrow-left.png);
+	background-repeat: no-repeat;
+	margin: 8px 8px 8px 8px;
+	width: 140px;
+	height: 88px;
+	float: left;
+}
+
+.note2{
+	background-image: url(../images/note.png);
+	background-repeat: no-repeat;
+	margin: -845px 0px 0px 495px ;
+	float: left;
+	height: 88px;
+	position: fixed;
+float: left;
+z-index: 1000;
+	width: 140px;
+}
+
+.hidden{
+	display: none;
+}
+
+
+		
+.content #note input {
+			width: 90%;
+			height: 95px;
+			border: 1px solid #898989;
+			margin-bottom: -1px;
+			font-size: 30px;
+			color: #898989;
+			text-align: center;
+			 -webkit-appearance: none;
+			 border-radius: 0;
+		}
+
+.content .zoekvak input {
+			width: 95%;
+			height: 95px;
+			border: 1px solid #898989;
+			margin-bottom: -1px;
+			font-size: 30px;
+			color: #898989;
+			text-align: center;
+			 -webkit-appearance: none;
+			 border-radius: 0;
+			 margin-bottom: 30px;
+		}
+
+.content #note textarea {
+			width: 95%;
+			height: 105px;
+			border: 1px solid #898989;
+			margin-bottom: -1px;
+			font-size: 30px;
+			color: #898989;
+			text-align: center;
+			 -webkit-appearance: none;
+			 border-radius: 0;
+		}	
+		
+.content #note input[type="submit"] {
+width: 140px;
+height: 88px;
+background: url(../images/VoegToe.png) no-repeat;
+border: 0;
+cursor: pointer;
+position: fixed;
+float: left;
+z-index: 1000;
+margin: -845px 0px 0px 495px ;
+}	
+
+h4{
+	font-family: Helvetica;
+	font-size: 30px;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+}
+
+h3{
+	font-family: Helvetica;
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
 }
