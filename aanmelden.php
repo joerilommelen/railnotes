@@ -5,6 +5,7 @@
 		<title>Railnotes</title>
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" charset="utf-8">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" charset="utf-8">
 		<link href="images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" />
 		<link href="images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72" />
 		<link href="images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114" />
@@ -13,7 +14,9 @@
 		<meta name="viewport" content="user-scalable=0, initial-scale=0.5">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="javascript/functions.js" type="text/javascript"></script>
+		<script src="javascript/plugins2.js"></script>
 		<!-- iPhone LAUNCHSCREEN-->
 		<link href="images/apple-launch-480h.png" sizes="320x480" media="(device-height: 480px)" rel="apple-touch-startup-image">
 		<!-- iPhone (Retina) LAUNCHSCREEN-->
@@ -23,18 +26,22 @@
 	</head>
 	<body>
 	<div class="container">
+	
+	<header>
 		<div class="header">
 		
-					<a href="index.php"><div class="arrow-left"></div></a>
+			<a href="javascript:javascript:history.go(-1)"><div class="arrow-left-detail"></div></a><h1></h1>
 					
 		</div>
+	</header>
 		
 		<div class="content">
-		
 				
 			<div class="content-aanmelden">
 		
-			<form id="form-aanmelden" method="POST" action="" enctype="multipart/form-data">
+			<form id="form-aanmelden" method="POST" action="meldaan.php" enctype="multipart/form-data">
+			
+				<div class="feedback">Inloggen</div>
 			
 				<input type="text" id="gebruikersnaam-login" name="gebruikersnaam-login" placeholder="Gebruikersnaam" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Gebruikersnaam'"/>
 				

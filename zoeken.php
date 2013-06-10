@@ -22,16 +22,22 @@
 	</head>
 	<body>
 	<div class="container">
+	
+	<header>
 		<div class="header">
 		
-		<a href="note.php"><div class="note"></div></a>
+		<a href="note.php"><div class="note"></div></a><h1></h1>
 		
 		</div>
+		
+	</header>
 		<div class="content">
 		<form id="zoekForm" class="zoekvak" action="" method="get" onsubmit="return submitZoekForm('zoekForm','searchfield',3,'De zoekterm moet minimum 3 characters bevatten')">
 					<input type="text" name="zoek" id="zoek" class="hdr_search_field" placeholder="Zoek op jouw station" value="" onfocus="if (this.value=='Zoek op jouw station') this.value='';">
 					<!-- <input type="submit" name="submit" align="absmiddle" alt="Zend" value="" class="hdr_search_button"></button> -->
-					</form>
+		</form>
+		
+		<div class="clearfix"></div>
 					
 					
 					<?php
@@ -50,30 +56,51 @@
     					
     					if(($vAllZoek->num_rows)=='0') {
     					
-							echo '<div class="item">';
-    					echo "<h4>Jouw station '" . ($_GET['zoek']) . "' leverde geen vertragingen op! </h4>";
-    						echo '</div>';	
+								echo '<div class="item">';
+								
+								echo "<h4>Jouw station '" . ($_GET['zoek']) . "' leverde geen vertragingen op! </h4>";
+								
+								echo '</div>';	
+								
+								
     					} else {
     					
-    					    					while ($Feed = mysqli_fetch_assoc($vAllZoek)) {
-													echo '<a href="detail.php?id=' . $Feed['id'] . '">';
+    					 	
+    					 	while ($Feed = mysqli_fetch_assoc($vAllZoek)) {
+    					 	
+    					 		echo '<article>';
+								
+								echo '<a href="detail.php?id=' . $Feed['id'] . '">';
 
-							echo '<div class="item">';
-										    				echo '<div class="tijd">';
+								echo '<div class="item">';
+								
+								echo '<div class="tijd">';
 			    				
 			    				echo '<p id="uur"> ' . $Feed['VertrekUur'] . '</p>';
+			    				
 			    				echo '<p id="vertraging"> + ' . $Feed['Vertraging'] . '</p>';
+			    				
 			    				echo '</div>';
+			    				
 			    				echo '<div class="vannaar">';
+			    				
 			    				echo '<p id="traject">' . $Feed['TrajectVan'] . ' - ' . $Feed['TrajectNaar'] .'</p>';
+			    				
 			    				echo '<div class="flag">';
+			    				
 			    				echo '<p id="tag">Station ' . $Feed['Station'] . '</p>';
+			    				
 			    				echo '</div>';
+			    				
 			    				echo '</div>';
 			    				
 			    				echo '<div style="clear:both;"></div>';
+			    				
 			    				echo '</div>';
+								
 								echo '</a>';
+								
+								echo '</article>';
 
 		    			
 		    			}
@@ -94,12 +121,13 @@
 		
 		</div>		
 	
-		
+		<footer>
 		<div class="footer">
 		<a href="overzicht.php"><img src="images/overzicht.png" alt="overzicht_active"></a>
 		<a href="zoeken.php"><img src="images/zoeken_active.png" alt="zoeken"></a>
 		<a href="instellingen.php"><img src="images/instellingen.png" alt="instellingen"></a>
 		</div>
+		</footer>
 	</div>
 	</body>
 </html>

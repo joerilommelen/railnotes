@@ -39,7 +39,6 @@
 				
 				});
 				
-				
 				$("#form-registreer").submit(function(){
 					
 				var myData = $('#form-registreer').serialize();
@@ -71,6 +70,7 @@
 			        
 			        case 3: 
 			        $(".feedback").html(data.message).fadeIn('slow');
+			        window.location.replace("aanmelden.php")
 			        break;
 			        
 			        case 4: 

@@ -1,13 +1,14 @@
 <?php 
 
+// database connectie
+
 include('includes/connection.php');
 
 
-
-	$Gebruikersnaam = isset($_POST['gebruikersnaam']);
-	$Email = isset($_POST['email']);
-	$Volledigenaam = isset($_POST['volledigenaam']);
-	$Paswoord = isset($_POST['wachtwoord']);
+	$Gebruikersnaam = $_POST['gebruikersnaam'];
+	$Email = $_POST['email'];
+	$Volledigenaam = $_POST['volledigenaam'];
+	$Paswoord = $_POST['wachtwoord'];
 		
 	if(empty( $_POST['gebruikersnaam']) || empty($_POST['email']) || empty($_POST['volledigenaam']) || empty($_POST['wachtwoord'])){
 			

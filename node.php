@@ -13,7 +13,6 @@ if (isset($_POST['voegtoe'])) {
 		$feedvoegtoe -> Station = mb_convert_encoding ( $_POST['station'], 'ISO-8859-15','utf-8' );
 		$feedvoegtoe -> Commentaar = mb_convert_encoding ( $_POST['commentaar'], 'ISO-8859-15','utf-8' );
 		$feedvoegtoe -> getOverzicht_voegtoe();
-		
 		header('Location: overzicht.php');
 		
 		
@@ -46,41 +45,33 @@ if (isset($_POST['voegtoe'])) {
 	</head>
 	<body>
 	<div class="container">
-	
-	<header>
 		<div class="header">
 		
-
-		<a href="javascript:javascript:history.go(-1)" ><div class="annuleer"></div></a><h1></h1>
 		
 		</div>
-		
-	</header>
 		<div class="content">
 		
-		<form action="" id="note" name="note" method="post" accept-charset="utf-8">
+		<form action="" name="myForm" method="post" accept-charset="utf-8">
 				
-				<label for="vertrekuur"></label>
-				<input id="vertrekuur" type="text" size="97" name="vertrekuur" class="required" placeholder="Vertrekuur"  value="" maxlength="80"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Vertrekuur'">
+				<label for="vertrekuur"><h1>Vertrek Uur</h1></label>
+				<input id="vertrekuur" type="text" size="97" name="vertrekuur" class="required"  value="" maxlength="80">
 				
-				<label for="vertraging"></label>
-				<input id="vertraging" type="text" size="97" name="vertraging" class="required" placeholder="Aantal minuten vertraging" value="" maxlength="80"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Aantal minuten vertraging'">
+				<label for="vertraging"><h1>Vertraging</h1></label>
+				<input id="vertraging" type="text" size="97" name="vertraging" class="required"  value="" maxlength="80">
 				
-				<label for="trajectvan"></label>
-				<input id="trajectvan" type="text" size="97" name="trajectvan" class="required" placeholder="De trein vertrek in?"  value="" maxlength="80"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'De trein vertrekt in?'">
+				<label for="trajectvan"><h1>Van</h1></label>
+				<input id="trajectvan" type="text" size="97" name="trajectvan" class="required"  value="" maxlength="80">
 				
-				<label for="trajectnaar"></label>
-				<input id="trajectnaar" type="text" size="97" name="trajectnaar" class="required" placeholder="De trein komt aan in?"  value="" maxlength="80"
-				 onfocus="this.placeholder = ''" onblur="this.placeholder = 'De trein komt aan in?'">
+				<label for="trajectnaar"><h1>Naar</h1></label>
+				<input id="trajectnaar" type="text" size="97" name="trajectnaar" class="required"  value="" maxlength="80">
 				
-				<label for="station"></label>
-				<input id="station" type="text" size="97" name="station" placeholder="Ik ben nu in het station ..." class="required"  value="" maxlength="80"
-				 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ik ben nu in het station ...'">
-							
-				<label for="commentaar"></label>
-				<textarea name="commentaar" id="commentaar" rows="5" placeholder="Mijn commentaar" cols="70"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mijn commentaar'"></textarea>
+				<label for="station"><h1>Jouw Station</h1></label>
+				<input id="station" type="text" size="97" name="station" class="required"  value="" maxlength="80">
+								
+				<label for="commentaar"><h1>Commentaar</h1></label>
+				<textarea name="commentaar" id="commentaar" rows="5" cols="70" placeholder=""></textarea>
 												
-				<input type="submit" id="toevoegen" value="Toevoegen" class="hdr_voegtoe_button" name="voegtoe">
+				<input type="submit" class="knop" value="Voeg toe" name="voegtoe">
 		
 				</form>
 

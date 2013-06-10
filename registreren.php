@@ -8,6 +8,7 @@
 		<title>Railnotes</title>
 		<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen" charset="utf-8">
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" charset="utf-8">
 		<link href="images/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" />
 		<link href="images/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72" />
 		<link href="images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114" />
@@ -28,12 +29,14 @@
 	</head>
 	<body>
 	<div class="container">
+	
+	<header>
 		<div class="header">
 		
-			<a href="index.php"><div class="arrow-left"></div></a>
+			<a href="javascript:javascript:history.go(-1)"><div class="arrow-left-detail"></div></a><h1></h1>
 		
 		</div>
-		
+	</header>
 		<div class="content-registreer">
 		
 			<form id="form-registreer" method="POST" action="registreer.php">

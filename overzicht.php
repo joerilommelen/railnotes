@@ -21,6 +21,7 @@ $AllFeeds = $oFeed -> getOverzicht();
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<script src="javascript/functions.js" type="text/javascript"></script>
+		<script src="javascript/plugins.js"></script>
 		<!-- iPhone LAUNCHSCREEN-->
 		<link href="images/apple-launch-480h.png" sizes="320x480" media="(device-height: 480px)" rel="apple-touch-startup-image">
 		<!-- iPhone (Retina) LAUNCHSCREEN-->
@@ -30,42 +31,69 @@ $AllFeeds = $oFeed -> getOverzicht();
 	</head>
 	<body>
 	<div class="container">
+	
+	<header>
 		<div class="header">
 		
-		<a href="note.php"><div class="note"></div></a>
-		
+		<a href="note.php"><div class="note"></div></a><h1></h1>
+
 		</div>
+		
+	</header>	
 		<div class="content">
 		<?php 
 		    			while ($Feed = mysqli_fetch_assoc($AllFeeds)) {
-		    			echo '<a href="detail.php?id=' . $Feed['id'] . '">';
+		    			
+		    					echo '<article>';
+		    					
+		    					echo '<a href="detail.php?id=' . $Feed['id'] . '">';
+			    				
 			    				echo '<div class="item">';
 			    				
 			    				echo '<div class="tijd">';
+			    				
 			    				echo '<p id="uur"> ' . $Feed['VertrekUur'] . '</p>';
+			    				
 			    				echo '<p id="vertraging"> + ' . $Feed['Vertraging'] . '</p>';
-			    				echo '</div>';
-			    				echo '<div class="vannaar">';
-			    				echo '<p id="traject">' . $Feed['TrajectVan'] . ' - ' . $Feed['TrajectNaar'] .'</p>';
-			    				echo '<div class="flag">';
-			    				echo '<p id="tag">Station ' . $Feed['Station'] . '</p>';
-			    				echo '</div>';
+			    				
 			    				echo '</div>';
 			    				
-			    				echo '<div style="clear:both;"></div>';
+			    				echo '<div class="vannaar">';
+			    				
+			    				echo '<p id="traject">' . $Feed['TrajectVan'] . ' - ' . $Feed['TrajectNaar'] .'</p>';
+			    				
+			    				echo '<div class="flag">';
+			    				
+			    				echo '<p id="tag">Station ' . $Feed['Station'] . '</p>';
+			    				
 			    				echo '</div>';
+			    				
+			    				echo '</div>';
+			    				
+			    				echo '<div class="clearfix"></div>';
+			    				
+			    				echo '</div>';
+			    				
 			    				echo '</a>';
+			    				
+			    				echo '</article>';
 			    				
 		    			}
 	    			?>
 	    			<div style="clear:both;"></div>
 		
 		</div>		
-		<div class="footer">
-		<a href="overzicht.php"><img src="images/overzicht_active.png" alt="overzicht_active"></a>
-		<a href="zoeken.php"><img src="images/zoeken.png" alt="zoeken"></a>
-		<a href="instellingen.php"><img src="images/instellingen.png" alt="instellingen"></a>
-		</div>
+		
+		<footer>
+		
+			<div class="footer">
+			<a href="overzicht.php"><img src="images/overzicht_active.png" alt="overzicht_active"></a>
+			<a href="zoeken.php"><img src="images/zoeken.png" alt="zoeken"></a>
+			<a href="instellingen.php"><img src="images/instellingen.png" alt="instellingen"></a>
+			</div>
+			
+		</footer>
+		
 	</div>
 	</body>
 </html>

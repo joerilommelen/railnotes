@@ -1,4 +1,17 @@
-<!DOCTYPE html>
+<?php 
+
+if(isset($_COOKIE['ingelogd'])){
+	
+	header('Location: http://railnotes.laurensnicolay.be/overzicht.php');
+}
+
+else {
+	
+	// Error
+
+}
+
+?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -14,9 +27,9 @@
 		<link href="images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144" />
 		<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
 		<meta name="viewport" content="user-scalable=0, initial-scale=0.5">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="javascript/functions.js" type="text/javascript"></script>
 		<script src="javascript/plugins.js"></script>
 		<!-- iPhone LAUNCHSCREEN-->

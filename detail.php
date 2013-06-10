@@ -41,40 +41,62 @@ $Feed = $vAllFeed -> fetch_assoc();
 	</head>
 	<body>
 	<div class="container">
+	
+	<header>
 		<div class="header">
 		
-		<a href="javascript:javascript:history.go(-1)"><div class="arrow-left-detail"></div></a>
+		<a href="javascript:javascript:history.go(-1)"><div class="arrow-left-detail"></div></a><h1></h1>
 		
 		</div>
-		<div class="detail">
+		
+	</header>
+		<div class="content">
 		<?php 
-		    			
+		    					echo '<article>';
+		    					
 			    				echo '<div class="item">';
+			    				
 			    				echo '<div class="tijd">';
+			    				
 			    				echo '<p id="uur"> ' . $Feed['VertrekUur'] . '</p>';
+			    				
 			    				echo '<p id="vertraging"> + ' . $Feed['Vertraging'] . '</p>';
+			    				
 			    				echo '</div>';
+			    				
 			    				echo '<div class="vannaar">';
+			    				
 			    				echo '<p id="traject">' . $Feed['TrajectVan'] . ' - ' . $Feed['TrajectNaar'] .'</p>';
+			    				
 			    				echo '<div class="flag">';
+			    				
 			    				echo '<p id="tag">Station ' . $Feed['Station'] . '</p>';
+			    				
 			    				echo '</div>';
+			    				
 			    				echo '</div>';
+			    				
 			    				echo '<div style="clear:both;"></div>';
+			    				
 			    				echo '</div>';
 			    				
 			    				echo '<h3>Commentaar</h3>';
-			    				echo '<p id="tag">' . $Feed['Commentaar'] . '</p>';
+			    				
+			    				echo '<p id="tag2">' . $Feed['Commentaar'] . '</p>';
+			    				
+			    				echo '</article>';
 
 	    			?>
 	    			<div style="clear:both;"></div>
 		
 		</div>		
+		<footer>
 		<div class="footer">
 		<a href="overzicht.php"><img src="images/overzicht_active.png" alt="overzicht_active"></a>
 		<a href="zoeken.php"><img src="images/zoeken.png" alt="zoeken"></a>
 		<a href="instellingen.php"><img src="images/instellingen.png" alt="instellingen"></a>
 		</div>
+		</footer>
 	</div>
 	</body>
 </html>

@@ -1,8 +1,8 @@
 <?php
 //variabelen voor database connectie
 $localhost = "localhost";
-$user = "root";
-$password = "root";
+$user = "lauresr83_joeri";
+$password = "123456";
 $database = "lauresr83_RN";
 
 //database connectie maken

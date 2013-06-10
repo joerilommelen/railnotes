@@ -77,7 +77,7 @@ class Overzicht {
 	public function getOverzicht()
 	{
 		include ('connection.php');
-		$sSql = "SELECT * FROM tbl_Overzicht ORDER BY id DESC";
+		$sSql = "SELECT * FROM tbl_Overzicht ORDER BY id DESC LIMIT 60";
 		$res = $conn -> query($sSql);
 		return ($res);
 	}
